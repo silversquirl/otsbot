@@ -22,4 +22,7 @@ async def on_message(msg):
         command_fun = decorators.commands.get(cmd.lower(), invalid_commandD)
         await command_fun(client, msg, arg)
 
+# TODO: hook role creation and deletion to update roles message
+# TODO: create roles message if it doesn't exist
+
 client.run(config.access_tok)

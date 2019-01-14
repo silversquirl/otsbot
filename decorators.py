@@ -44,7 +44,7 @@ def permission(*perms):
             user_dcperms = msg.channel.permissions_for(msg.author)
             for perm in perms:
                 if isinstance(perm, DiscordPerm):
-                    if not getattr(user_dcperms, perm.name.lower()):
+                    if not getattr(user_dcperms, perm.value):
                         return Error.ACCESS_DENIED
                 # TODO: custom permissions
             return await fn(client, msg, param)

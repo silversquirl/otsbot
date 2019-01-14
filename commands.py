@@ -6,6 +6,7 @@ from helpers import *
 
 @command
 async def iam(client, msg, role_name):
+    # TODO: use msg.role_mentions instead of parsing the message
     role_name = role_name.strip()
     if role_name.startswith(config.admin_prefix):
         return Error.ACCESS_DENIED
