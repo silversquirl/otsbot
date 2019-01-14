@@ -1,4 +1,4 @@
-from enum import Enum, auto
+from enum import Enum
 
 class DiscordPerm(Enum):
     CREATE_INSTANT_INVITE = "create_instant_invite"
